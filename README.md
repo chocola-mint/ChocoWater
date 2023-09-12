@@ -4,7 +4,7 @@ https://github.com/chocola-mint/ChocoWater/assets/56677134/fec60111-6dfd-42f6-9b
 
 
 
-[WebGL Demo](https://chocola-mint.itch.io/chocowater-demo)
+**[WebGL Demo](https://chocola-mint.itch.io/chocowater-demo)**
 
 2.5D Dynamic Reflective Water system for Unity's Universal Rendering Pipeline (URP). Tested with both the **URP 2D Renderer** and **Universal Forward Renderer**. This package does not depend on compute shaders, and should run pretty much everywhere. Notably, it supports **WebGL**.
 
