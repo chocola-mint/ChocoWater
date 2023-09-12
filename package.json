@@ -1,0 +1,11 @@
+{
+    "name": "com.chocola-mint.chocowater",
+    "displayName": "ChocoWater",
+    "description": "2.5D Dynamic Reflective Water system for Unity's Universal Rendering Pipeline (URP).",
+    "version": "0.1",
+    "unity": "2021.3",
+    "author": "ChocolaMint (https://github.com/chocola-mint)",
+    "homepage": "https://github.com/chocola-mint/ChocoWater#readme",
+    "dependencies": {
+    }
+}

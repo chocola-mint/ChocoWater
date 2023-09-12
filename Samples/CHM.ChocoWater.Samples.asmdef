@@ -1,0 +1,18 @@
+{
+    "name": "CHM.ChocoWater.Samples",
+    "rootNamespace": "CHM.ChocoWater.Samples",
+    "references": [
+        "GUID:be36f2b2c540e024398a0d3d32f07fd1",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:15fc0a57446b3144c949da3e2b9737a9"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

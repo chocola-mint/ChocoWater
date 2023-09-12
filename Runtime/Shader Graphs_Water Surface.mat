@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5335564996717026946
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shader Graphs_Water Surface
+  m_Shader: {fileID: -6465566751694194690, guid: bc154df5d1c917e46bfb445e7c1a2e7c, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _DisplacementTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ScreenTex:
+        m_Texture: {fileID: 8400000, guid: 7123cdacd246e3d4384e830fc16b99cf, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _SurfaceFlowAmplitude: 0.005
+    - _SurfaceFlowFrequency: 0.5
+    - _SurfaceFoamDepth: 0.05
+    - _SurfaceFoamWaveDepth: 0.1
+    - _SurfaceFoamWaveFrequency: 1
+    - _SurfaceFoamWaveScale: 1
+    - _SurfaceViewDepth: 2
+    - _UnderwaterFlowAmplitude: 0.001
+    - _UnderwaterFlowFrequency: 0.25
+    - _WaveDepthPropagationRatio: 0
+    m_Colors:
+    - _DepthColor: {r: 0.123353474, g: 0.21292305, b: 0.41509426, a: 1}
+    - _ObjectSize: {r: 0, g: 0, b: 0, a: 0}
+    - _WaterColor: {r: 0.19490916, g: 0.5201249, b: 0.5660378, a: 0}
+  m_BuildTextureStacks: []
