@@ -27,12 +27,16 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: 3000
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _DisplacementMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _DisplacementTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -57,8 +61,11 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _RippleDepthPropagationRatio: 0.75
+    - _RippleDistortionIntensity: 0.2
     - _SurfaceFlowAmplitude: 0.005
     - _SurfaceFlowFrequency: 0.5
+    - _SurfaceFlowIntensity: 0.005
     - _SurfaceFoamDepth: 0.05
     - _SurfaceFoamWaveDepth: 0.1
     - _SurfaceFoamWaveFrequency: 1
@@ -66,6 +73,7 @@ Material:
     - _SurfaceViewDepth: 2
     - _UnderwaterFlowAmplitude: 0.001
     - _UnderwaterFlowFrequency: 0.25
+    - _UnderwaterFlowIntensity: 0.001
     - _WaveDepthPropagationRatio: 0
     m_Colors:
     - _DepthColor: {r: 0.123353474, g: 0.21292305, b: 0.41509426, a: 1}

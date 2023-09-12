@@ -21,6 +21,8 @@ ChocoWater is distributed as a git package. Use Unity's [Package Manager](https:
 Once installed, you'll want to add the `ChocoWaterRenderFeature` to your `Renderer 2D` asset, and change the `Post Transparent Layer Mask` to contain *only* the layer where the water object is going to reside. For example, you may use the built-in "Water" layer.
 ![image](https://github.com/chocola-mint/ChocoWater/assets/56677134/8e77eb6c-67c8-4bd2-b0e2-cf21aea23a40)
 
+Finally, add the prefab `ChocoWater` inside the `Prefab` folder into your scene, and enter play mode to see the water rendered.
+
 ## Technical Details
 
 ### Rendering
