@@ -33,7 +33,7 @@ ChocoWater uses the shader `Shader Graphs/Water Surface`. Properties in *italics
 
 Note that the built-in Prefab comes with a material using the same shader, but you're recommended to make your own copy and edit its properties as needed.
 
-| Property                        | Type        |                                                                               |
+| Property                        | Type        | Description                                                                   |
 | ------------------------------- | ----------- | ----------------------------------------------------------------------------- |
 | *DisplacementMap*               | `Texture2D `| A 1D texture (Height=1) that describes the world-space surface displacement. Automatically created and updated by `WaterVolume`.      
 | *ObjectSize*                    | `Vector2`   | The water's size in object space. Automatically assigned by `WaterVolume`.
