@@ -35,7 +35,7 @@ Note that the built-in Prefab comes with a material using the same shader, but y
 
 | Property                        | Type        |                                                                               |
 | ------------------------------- | ----------- | ----------------------------------------------------------------------------- |
-| *DisplacementMap*               | `Texture2D `| A 1D texture (Height=1) that describes the surface displacement. Automatically created and updated by `WaterVolume`.      
+| *DisplacementMap*               | `Texture2D `| A 1D texture (Height=1) that describes the world-space surface displacement. Automatically created and updated by `WaterVolume`.      
 | *ObjectSize*                    | `Vector2`   | The water's size in object space. Automatically assigned by `WaterVolume`.
 | WaterColor                      | `Color`     | The base color of the water.
 | DepthColor                      | `Color`     | A color used to darken the color of the water near the bottom. Uses multiplicative blending.
