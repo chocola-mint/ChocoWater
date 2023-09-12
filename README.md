@@ -8,24 +8,49 @@ https://github.com/chocola-mint/ChocoWater/assets/56677134/fec60111-6dfd-42f6-9b
 
 2.5D Dynamic Reflective Water system for Unity's Universal Rendering Pipeline (URP). Tested with both the **URP 2D Renderer** and **Universal Forward Renderer**. This package does not depend on compute shaders, and should run pretty much everywhere. Notably, it supports **WebGL**.
 
-The code has been thoroughly commented, and every inspector field comes with a tooltip. Hopefully it will be helpful to people interested in implementation of these kinds of systems.
+The code and shaders have been thoroughly commented, and every inspector field comes with a tooltip. Hopefully it will be helpful to people interested in implementation of these kinds of systems.
 
 Inspired by [ruccho's WaterRW](https://github.com/ruccho/WaterRW/) and [this article by Illham Effendi](https://ilhamhe.medium.com/dynamic-2d-water-in-unity-8d897852ee01).
 
 ## Requirements
 
-* This project is made with Unity 2021.3.30f1, but should work with 2021.3 versions and above in general.
+* This project is developed using Unity 2021.3.30f1, but should work with version 2021.3 and above in general.
 * You'll also need to install the [Universal Render Pipeline](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@12.1/manual/index.html) package.
     * The easiest way is to just create your project with the 2D URP or 3D URP template.
-* At the moment ChocoWater's rendering requires the target platform to support single-channel float textures (also known as `R32F`).
+* At the moment, ChocoWater's rendering requires the target platform to support single-channel float textures (also known as `R32F`).
 
 ## Installation
-ChocoWater is distributed as a git package. Use Unity's [Package Manager](https://docs.unity3d.com/Manual/upm-ui-giturl.html) and install using this repository's URL: `https://github.com/chocola-mint/ChocoWater`.
+ChocoWater is distributed as a git package. Use Unity's [Package Manager](https://docs.unity3d.com/Manual/upm-ui-giturl.html) and install using this repository's URL: `https://github.com/chocola-mint/ChocoWater.git`.
 
 Once installed, you'll want to add the `ChocoWaterRenderFeature` to your `Renderer 2D` asset, and change the `Post Transparent Layer Mask` to contain *only* the layer where the water object is going to reside. For example, you may use the built-in "Water" layer.
 ![image](https://github.com/chocola-mint/ChocoWater/assets/56677134/8e77eb6c-67c8-4bd2-b0e2-cf21aea23a40)
 
 Finally, add the prefab `ChocoWater` inside the `Prefab` folder into your scene, and enter play mode to see the water rendered.
+
+## Material Properties
+
+ChocoWater uses the shader `Shader Graphs/Water Surface`. Properties in *italics* are automatically assigned, you do not need to assign them yourself.
+
+Note that the built-in Prefab comes with a material using the same shader, but you're recommended to make your own copy and edit its properties as needed.
+
+| Property                        | Type        |                                                                               |
+| ------------------------------- | ----------- | ----------------------------------------------------------------------------- |
+| *DisplacementMap*               | `Texture2D `| A 1D texture (Height=1) that describes the surface displacement. Automatically created and updated by `WaterVolume`.      
+| *ObjectSize*                    | `Vector2`   | The water's size in object space. Automatically assigned by `WaterVolume`.
+| WaterColor                      | `Color`     | The base color of the water.
+| DepthColor                      | `Color`     | A color used to darken the color of the water near the bottom. Uses multiplicative blending.
+| SurfaceViewDepth                | `Float`     | The desired size of the top-facing side of the water, in world space.
+| Wave Depth Propagation Ratio    | `Float`     | How much of the displacement should be applied to the edge of the water that's "closer" to the camera. Setting this to 1 will make waves look like ribbons.
+| Surface Foam Depth              | `Float`     | How "deep" the topmost white edge should go.
+| Surface Foam Wave Scale         | `Float`     | Used to scale the wavy pattern that makes up the surface foam.
+| Surface Foam Wave Frequency     | `Float`     | How quickly the surface foam's pattern should be played.
+| Surface Foam Wave Depth         | `Float`     | The maximum additional depth added to the surface foam line.
+| Ripple Distortion Frequency     | `Float`     | How harshly the water ripples should be distorted.
+| Ripple Depth Propagation Ratio  | `Float`     | A value of 1 causes ripples to cross the water surface completely, while a value of 0 stops it from propagating at all. Somewhere around 0.75 should be fine.
+| Underwater Flow Frequency        | `Float`     | How frequently should underwater pixels be distorted.
+| Underwater Flow Intensity        | `Float`     | How strong the underwater distortion should be, in screen space.
+| Surface Flow Frequency           | `Float`     | How frequently should surface pixels be distorted.
+| Surface Flow Intensity           | `Float`     | How strong the surface distortion should be in, in screen space.
 
 ## Technical Details
 
@@ -53,7 +78,7 @@ For each tick (`WaterVolume.Tick()`):
 * It then updates every spring's velocity according to its displacement and velocity. This is what makes the spring feel like a spring.
 * Afterwards, every spring *spreads* its velocity to its immediate neighbors, according to their height differences. This is what makes waves propagate along the entire water surface.
 
-`WaterVolume` provides a method (`WaterVolume.SurfaceImpact()`) to interact with the water surface physically. If the water simulation is "predictable" in the sense that, you know ahead of time when and how objects will fall into the water, you can invoke this method manually. There are several simulation parameters that you can adjust to make the water behave more differently, but be careful as some configurations may cause the simulation to become unstable and diverge. Please read the tooltips carefully when customizing.
+`WaterVolume` provides a method `WaterVolume.SurfaceImpact()` to interact with the water surface physically. If the water simulation is "predictable" in the sense that, you know ahead of time when and how objects will fall into the water, you can invoke this method manually. There are several simulation parameters that you can adjust to make the water behave more differently, but be careful as some configurations may cause the simulation to become unstable and diverge. Please read the tooltips carefully when customizing.
 
 The `WaterTrigger` component is also provided here to support automatic interactions with rigidbodies from Unity 2D Physics. 
 
