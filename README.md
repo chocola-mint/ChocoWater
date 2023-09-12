@@ -45,7 +45,7 @@ Note that the built-in Prefab comes with a material using the same shader, but y
 | Surface Foam Wave Scale         | `Float`     | Used to scale the wavy pattern that makes up the surface foam.
 | Surface Foam Wave Frequency     | `Float`     | How quickly the surface foam's pattern should be played.
 | Surface Foam Wave Depth         | `Float`     | The maximum additional depth added to the surface foam line.
-| Ripple Distortion Frequency     | `Float`     | How harshly the water ripples should be distorted.
+| Ripple Distortion Intensity     | `Float`     | How harshly the water ripples should be distorted.
 | Ripple Depth Propagation Ratio  | `Float`     | A value of 1 causes ripples to cross the water surface completely, while a value of 0 stops it from propagating at all. Somewhere around 0.75 should be fine.
 | Underwater Flow Frequency        | `Float`     | How frequently should underwater pixels be distorted.
 | Underwater Flow Intensity        | `Float`     | How strong the underwater distortion should be, in screen space.
