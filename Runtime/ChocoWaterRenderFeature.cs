@@ -62,8 +62,6 @@ namespace CHM.ChocoWater
 
             public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
             {
-                // if(renderingData.cameraData.isSceneViewCamera) return;
-                // if(renderingData.cameraData.isPreviewCamera) return;
                 CommandBuffer cmd = CommandBufferPool.Get();
                 context.ExecuteCommandBuffer(cmd);
                 cmd.Clear();
@@ -80,7 +78,9 @@ namespace CHM.ChocoWater
             }
         }
         /// <summary>
-        /// This pass is used to draw objects 
+        /// This pass is used to draw objects specified in the postTransparentLayerMask.<br/>
+        /// It will also enable the _POSTTRANSPARENTPASS global shader keyword during<br/>
+        /// rendering.
         /// </summary>
         private class RenderPass : ScriptableRenderPass
         {
@@ -115,9 +115,7 @@ namespace CHM.ChocoWater
 
                 DrawingSettings drawSettings;
                 drawSettings = CreateDrawingSettings(shaderTagIdList, ref renderingData, SortingCriteria.CommonTransparent);
-                // cmd.EnableKeyword(keywordPostTransparentPass);
                 context.DrawRenderers(renderingData.cullResults, ref drawSettings, ref filteringSettings, ref renderStateBlock);
-                // cmd.DisableKeyword(keywordPostTransparentPass);
                 context.ExecuteCommandBuffer(cmd);
                 CommandBufferPool.Release(cmd);
             }
