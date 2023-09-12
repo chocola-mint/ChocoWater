@@ -1,7 +1,7 @@
 # ChocoWater
 
-https://github.com/chocola-mint/ChocoWater/assets/56677134/fec60111-6dfd-42f6-9b57-078eedf1c4f7
 
+https://github.com/chocola-mint/ChocoWater/assets/56677134/4f22b11e-9a71-483a-82d0-2b869f2847a8
 
 
 **[WebGL Demo](https://chocola-mint.itch.io/chocowater-demo)**
