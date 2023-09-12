@@ -73,7 +73,7 @@ In the fragment shader:
 
 As mentioned above, the `WaterVolume` component maintains a chain of springs on the water surface. The simulation ticks every `FixedUpdate` and its speed can be controlled via `Time.timeScale`. Every spring is represented by a displacement and a velocity, and so `WaterVolume` allocates two float buffers for the simulation.
 
-For each tick (`WaterVolume.Tick()`):
+For each physics step (`WaterVolume.Step()`):
 * `WaterVolume` moves every spring vertically according to its velocity.
 * It then updates every spring's velocity according to its displacement and velocity. This is what makes the spring feel like a spring.
 * Afterwards, every spring *spreads* its velocity to its immediate neighbors, according to their height differences. This is what makes waves propagate along the entire water surface.
