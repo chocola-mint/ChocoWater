@@ -1,5 +1,6 @@
 # ChocoWater
 
+**[日本語版](<README (jp).md>)**
 
 https://github.com/chocola-mint/ChocoWater/assets/56677134/4f22b11e-9a71-483a-82d0-2b869f2847a8
 
