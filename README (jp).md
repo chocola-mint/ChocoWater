@@ -89,4 +89,4 @@ ChocoWaterは`Shader Graphs/Water Surface`シェーダーを使用します。*�
 
 ## ライセンス
 
-MITライセンスを使用しています。`ChocoWaterRenderFeature`は[DMeville's RefractedTransparentRenderPass](https://github.com/DMeville/RefractedTransparentRenderPass)を元に書かれていたので、ファイル内では原作者のライセンスをコメントで付いています。
+MITライセンスを使用しています。`ChocoWaterRenderFeature`は[DMevilleさんのRefractedTransparentRenderPass](https://github.com/DMeville/RefractedTransparentRenderPass)を元に書かれていたので、ファイル内では原作者のライセンスをコメントで付いています。
