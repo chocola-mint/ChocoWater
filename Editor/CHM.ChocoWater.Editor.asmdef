@@ -1,0 +1,18 @@
+{
+    "name": "CHM.ChocoWater.Editor",
+    "rootNamespace": "CHM.ChocoWater.Editor",
+    "references": [
+        "GUID:be36f2b2c540e024398a0d3d32f07fd1"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -26,7 +26,7 @@ ChocoWaterはgitパッケージとして提供されています。Unityの[パ�
 インストールし終わったら、`ChocoWaterRenderFeature`というレンダーフィーチャーのスクリプトを`Renderer 2D`アセットに付けてください。それから`Post Transparent Layer Mask`のレイヤーを`Water`に変えてください。（このレイヤーマスクは「水オブジェクトのレイヤー」を含まないと正しく表示できません）
 ![image](https://github.com/chocola-mint/ChocoWater/assets/56677134/98c45379-2b7a-43e6-9716-320ba3926829)
 
-最後に、`Prefab`フォルダーに置いてある`ChocoWater`のプレハブをシーンに配置してください。プレイモードに入ったら水の状態が確認できます。
+最後に、シーンのHierarchyを右クリックして、"ChocoWater"を選択して、`ChocoWater`のプレハブをシーンに配置してください。プレイモードに入ったら水の状態が確認できます。
 
 ## マテリアル設定
 
